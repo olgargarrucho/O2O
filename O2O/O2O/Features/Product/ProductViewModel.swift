@@ -13,6 +13,8 @@ class ProductViewModel {
     
     weak var view: ProductViewControllerProtocol?
     var router: ProductRouter?
+
+    var product: ProductModelResponse?
     
     // MARK: - Helpers
     

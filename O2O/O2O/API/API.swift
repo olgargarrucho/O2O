@@ -12,7 +12,7 @@ enum APIType {
 
     var urlString: String {
         switch self {
-        case .data: return "https://api.punkapi.com/v2/beers?food="
+        case .data: return "https://api.punkapi.com/v2/beers?"
         }
     }
 }

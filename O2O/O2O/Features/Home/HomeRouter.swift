@@ -37,5 +37,11 @@ class HomeRouter {
     }
     
     // MARK: - Routes
+
+    func routeToProduct(_ product: ProductModelResponse?) {
+        let viewController = ProductRouter.getViewController()
+        viewController.viewModel.product = product
+        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+    }
     
 }

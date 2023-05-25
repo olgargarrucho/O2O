@@ -14,13 +14,9 @@ struct ProductModelResponse: Codable {
     let firstBrewed: String?
     let description: String?
     let imageURL: String?
-    let abv: Double?
-    let ibu: Int?
-    let ph: Double?
-    let ingredients: IngredientsModelResponse?
     let foodPairing: [String]?
+    let abv: Double?
     let brewersTips: String?
-
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,11 +25,8 @@ struct ProductModelResponse: Codable {
         case firstBrewed = "first_brewed"
         case description
         case imageURL = "image_url"
-        case abv
-        case ibu
-        case ph
-        case ingredients
         case foodPairing = "food_pairing"
+        case abv
         case brewersTips = "brewers_tips"
     }
 }

@@ -12,7 +12,7 @@ extension UIViewController {
 
     public func configureNavigationBar(withTitle title: String,
                                        prefersLargeTitles: Bool,
-                                       barTintColor: UIColor = .systemPink) {
+                                       barTintColor: UIColor) {
 
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
