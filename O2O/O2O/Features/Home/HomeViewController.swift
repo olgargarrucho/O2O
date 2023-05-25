@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
+    @IBOutlet weak var fireButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var beersTableView: UITableView!
@@ -47,6 +48,10 @@ class HomeViewController: UIViewController {
 
     @IBAction func nextDidClick(_ sender: Any) {
         viewModel.nextDidClicked()
+    }
+
+    @IBAction func fireDidClick(_ sender: Any) {
+        viewModel.fireDidClicked()
     }
 
     // MARK: - Helpers

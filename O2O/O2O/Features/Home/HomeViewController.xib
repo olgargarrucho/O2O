@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="O2O" customModuleProvider="target">
             <connections>
                 <outlet property="beersTableView" destination="yK6-I8-Xt6" id="roE-JG-3oN"/>
+                <outlet property="fireButton" destination="0Dk-lG-ujm" id="RdH-OR-o7s"/>
                 <outlet property="nextButton" destination="7ZE-2C-GCD" id="8zX-hS-wpy"/>
                 <outlet property="previousButton" destination="7q7-jc-2Tb" id="jLl-fL-qJy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,46 +27,77 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="709"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZE-2C-GCD">
-                    <rect key="frame" x="313" y="768" width="50" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-Yh-cE4">
+                    <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZE-2C-GCD">
+                            <rect key="frame" x="328" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="FO1-6h-si4"/>
+                                <constraint firstAttribute="width" constant="50" id="QxN-jD-hhU"/>
+                            </constraints>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
+                                <imageReference key="image" image="forward.end.circle.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="nextDidClick:" destination="-1" eventType="touchUpInside" id="RZv-FC-wyx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-jc-2Tb">
+                            <rect key="frame" x="258" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="e0d-DQ-zT0"/>
+                                <constraint firstAttribute="width" constant="50" id="weU-fc-dQD"/>
+                            </constraints>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
+                                <imageReference key="image" image="backward.end.circle.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="previousDidClick:" destination="-1" eventType="touchUpInside" id="Uby-u3-4nT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dk-lG-ujm">
+                            <rect key="frame" x="15" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1vc-H6-cFS"/>
+                                <constraint firstAttribute="width" constant="50" id="gje-lc-ZR5"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <imageReference key="image" image="flame.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </state>
+                            <connections>
+                                <action selector="fireDidClick:" destination="-1" eventType="touchUpInside" id="a14-fr-N06"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="FO1-6h-si4"/>
-                        <constraint firstAttribute="width" constant="50" id="QxN-jD-hhU"/>
+                        <constraint firstItem="0Dk-lG-ujm" firstAttribute="leading" secondItem="E9J-Yh-cE4" secondAttribute="leading" constant="15" id="2u6-eA-p1r"/>
+                        <constraint firstAttribute="trailing" secondItem="7ZE-2C-GCD" secondAttribute="trailing" constant="15" id="HWn-Pm-V4u"/>
+                        <constraint firstItem="0Dk-lG-ujm" firstAttribute="top" secondItem="E9J-Yh-cE4" secondAttribute="top" id="O7d-XQ-7ct"/>
+                        <constraint firstAttribute="height" constant="50" id="Xkh-aE-1qd"/>
+                        <constraint firstItem="7q7-jc-2Tb" firstAttribute="top" secondItem="E9J-Yh-cE4" secondAttribute="top" id="hm6-AW-MzX"/>
+                        <constraint firstItem="7ZE-2C-GCD" firstAttribute="leading" secondItem="7q7-jc-2Tb" secondAttribute="trailing" constant="20" id="qT3-fs-IbU"/>
                     </constraints>
-                    <color key="tintColor" systemColor="systemOrangeColor"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
-                        <imageReference key="image" image="forward.end.circle.fill" catalog="system" symbolScale="large"/>
-                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
-                    </buttonConfiguration>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-jc-2Tb">
-                    <rect key="frame" x="30" y="768" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="e0d-DQ-zT0"/>
-                        <constraint firstAttribute="width" constant="50" id="weU-fc-dQD"/>
-                    </constraints>
-                    <color key="tintColor" systemColor="systemOrangeColor"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
-                        <imageReference key="image" image="backward.end.circle.fill" catalog="system" symbolScale="large"/>
-                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="previousDidClick:" destination="-1" eventType="touchUpInside" id="Uby-u3-4nT"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7q7-jc-2Tb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="05m-dW-ig3"/>
                 <constraint firstItem="yK6-I8-Xt6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2PW-P9-4V1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7ZE-2C-GCD" secondAttribute="bottom" id="2jG-dK-4N7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7ZE-2C-GCD" secondAttribute="trailing" constant="30" id="QRK-Ng-Q1p"/>
-                <constraint firstItem="7q7-jc-2Tb" firstAttribute="top" secondItem="yK6-I8-Xt6" secondAttribute="bottom" id="Wqz-Zt-0nf"/>
-                <constraint firstItem="7ZE-2C-GCD" firstAttribute="top" secondItem="yK6-I8-Xt6" secondAttribute="bottom" id="YJ4-Pn-nMa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7q7-jc-2Tb" secondAttribute="bottom" id="l47-3x-gGr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E9J-Yh-cE4" secondAttribute="trailing" id="Rfh-iz-7B2"/>
+                <constraint firstItem="E9J-Yh-cE4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VzV-6p-UwE"/>
+                <constraint firstItem="E9J-Yh-cE4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gVL-hz-A0j"/>
+                <constraint firstItem="E9J-Yh-cE4" firstAttribute="top" secondItem="yK6-I8-Xt6" secondAttribute="bottom" id="jfn-hn-4SQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yK6-I8-Xt6" secondAttribute="trailing" id="m86-gc-bZI"/>
                 <constraint firstItem="yK6-I8-Xt6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uLZ-bv-xpB"/>
             </constraints>
@@ -74,12 +106,16 @@
     </objects>
     <resources>
         <image name="backward.end.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="flame.fill" catalog="system" width="106" height="128"/>
         <image name="forward.end.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

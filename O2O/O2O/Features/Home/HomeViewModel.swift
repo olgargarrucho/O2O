@@ -19,6 +19,7 @@ class HomeViewModel {
     var beers = [ProductModelResponse]()
     var searchText: String? = ""
     var page = 1
+    var onFire: Bool = false
 
     // MARK: - Lifecycle
 
@@ -36,6 +37,7 @@ class HomeViewModel {
 
             switch result {
             case .success(let data):
+                print(data)
                 self.beers.removeAll()
                 self.beers = data
 
@@ -63,6 +65,16 @@ class HomeViewModel {
     func nextDidClicked() {
         self.page += 1
         fetchData()
+    }
+
+    func fireDidClicked() {
+        self.onFire.toggle()
+        if onFire {
+            self.beers = self.beers.filter{ ($0.abv ?? 0) >= 9 }
+            self.view?.reload()
+        } else {
+            self.fetchData()
+        }
     }
 
     func numberOfRowsInSection() -> Int {

@@ -34,9 +34,13 @@ class HomeTableViewCell: UITableViewCell {
     func setup(_ product: ProductModelResponse?) {
         guard let product = product else { return }
 
-        let imageURL = product.imageURL ?? ""
-        let url = URL(string: imageURL)
-        self.productImage.sd_setImage(with: url)
+        if product.imageURL == "https://images.punkapi.com/v2/keg.png" {
+            self.productImage.image = UIImage(named: "defaultImage")
+        } else {
+            let imageURL = product.imageURL ?? ""
+            let url = URL(string: imageURL)
+            self.productImage.sd_setImage(with: url)
+        }
 
         var textFood = ""
         for food in product.foodPairing ?? [] {

@@ -41,9 +41,13 @@ class ProductViewController: UIViewController {
     private func configureUI() {
         guard let product = viewModel.product else { return }
 
-        let image = product.imageURL ?? ""
-        let url = URL(string: image)
-        self.beerImage.sd_setImage(with: url)
+        if product.imageURL == "https://images.punkapi.com/v2/keg.png" {
+            self.beerImage.image = UIImage(named: "defaultImage")
+        } else {
+            let image = product.imageURL ?? ""
+            let url = URL(string: image)
+            self.beerImage.sd_setImage(with: url)
+        }
 
         self.beerName.text = product.name ?? ""
         self.beerTagline.text = product.tagline ?? ""
