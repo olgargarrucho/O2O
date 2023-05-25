@@ -14,18 +14,18 @@ Technical test for O2O
 
 # Screenshots
 Home View and Home View filter
-![alt tag1](images/image01.png)
-![alt tag2](images/image02.png)
-![alt tag2](images/image03.png)
+![alt tag1](Images/image01.png)
+![alt tag2](Images/image02.png)
+![alt tag2](Images/image03.png)
 
 Details View IPA and no IPA product
-![alt tag2](images/image04.png)
-![alt tag2](images/image05.png)
+![alt tag2](Images/image04.png)
+![alt tag2](Images/image05.png)
 
 Tips and Error Alert View
 
-![alt tag2](images/image06.png)
-![alt tag2](images/image07.png)
+![alt tag2](Images/image06.png)
+![alt tag2](Images/image07.png)
 
 
 # Contact:
