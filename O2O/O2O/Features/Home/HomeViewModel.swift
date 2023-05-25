@@ -30,14 +30,12 @@ class HomeViewModel {
     // MARK: - Helpers
 
     func fetchData() {
-        print(page)
         let path = self.searchText?.isEmpty ?? false ? "&page=\(page)" : "food=" + (self.searchText ?? "") + "&page=\(page)"
         apiRest.fetch(.data, textSearch: path) { [weak self ] (result: APITypeResponse<[ProductModelResponse]>) in
             guard let self = self else { return }
 
             switch result {
             case .success(let data):
-                print(data)
                 self.beers.removeAll()
                 self.beers = data
 
@@ -53,6 +51,8 @@ class HomeViewModel {
     func searchByFood(searchText: String?) {
         if searchText != "", let searchText = searchText {
             self.searchText = searchText.replacingOccurrences(of: " ", with: "_")
+        } else {
+            self.searchText = ""
         }
         fetchData()
     }

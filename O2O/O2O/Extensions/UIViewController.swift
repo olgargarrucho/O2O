@@ -33,7 +33,7 @@ extension UIViewController {
 
     public func showError(title: String? = nil, message: String? = nil, onConfirm: @escaping (UIAlertAction) -> Void) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: onConfirm)
+        let okAction = UIAlertAction(title: "Accept", style: .default, handler: onConfirm)
         alert.addAction(okAction)
 
         self.present(alert, animated: true, completion: nil)

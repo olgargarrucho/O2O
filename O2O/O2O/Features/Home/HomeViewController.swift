@@ -145,7 +145,8 @@ extension HomeViewController: UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
-        viewModel.fetchData()
+        search(shouldShow: false)
+        viewModel.searchByFood(searchText: searchBar.text)
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {}
