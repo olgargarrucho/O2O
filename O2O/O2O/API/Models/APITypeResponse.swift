@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum APITypeResponse<T> {
+    case success(T)
+    case failure(APIErrorResponse)
+}

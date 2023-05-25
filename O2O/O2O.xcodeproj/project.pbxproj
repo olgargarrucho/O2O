@@ -15,7 +15,7 @@
 		F60E222A2A1F49AF00EA07C0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22292A1F49AF00EA07C0 /* UIViewController.swift */; };
 		F60E222C2A1F4ACA00EA07C0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E222B2A1F4ACA00EA07C0 /* UIView.swift */; };
 		F60E222F2A1F4B7E00EA07C0 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E222E2A1F4B7E00EA07C0 /* APIErrorResponse.swift */; };
-		F60E22312A1F4B9E00EA07C0 /* APISuccesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22302A1F4B9E00EA07C0 /* APISuccesResponse.swift */; };
+		F60E22312A1F4B9E00EA07C0 /* ProductModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22302A1F4B9E00EA07C0 /* ProductModelResponse.swift */; };
 		F60E22332A1F4BC200EA07C0 /* APITypeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22322A1F4BC200EA07C0 /* APITypeResponse.swift */; };
 		F60E223B2A1F4C7200EA07C0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22372A1F4C7200EA07C0 /* HomeRouter.swift */; };
 		F60E223C2A1F4C7200EA07C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22382A1F4C7200EA07C0 /* HomeViewController.swift */; };
@@ -25,6 +25,8 @@
 		F60E22442A1F4CC100EA07C0 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22402A1F4CC100EA07C0 /* ProductViewController.swift */; };
 		F60E22452A1F4CC100EA07C0 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22412A1F4CC100EA07C0 /* ProductViewModel.swift */; };
 		F60E22462A1F4CC100EA07C0 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F60E22422A1F4CC100EA07C0 /* ProductViewController.xib */; };
+		F60E22492A1F53CD00EA07C0 /* DataModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E22482A1F53CD00EA07C0 /* DataModelResponse.swift */; };
+		F60E224B2A1F562800EA07C0 /* IngredientsModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E224A2A1F562800EA07C0 /* IngredientsModelResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,7 @@
 		F60E22292A1F49AF00EA07C0 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F60E222B2A1F4ACA00EA07C0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F60E222E2A1F4B7E00EA07C0 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
-		F60E22302A1F4B9E00EA07C0 /* APISuccesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISuccesResponse.swift; sourceTree = "<group>"; };
+		F60E22302A1F4B9E00EA07C0 /* ProductModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelResponse.swift; sourceTree = "<group>"; };
 		F60E22322A1F4BC200EA07C0 /* APITypeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypeResponse.swift; sourceTree = "<group>"; };
 		F60E22372A1F4C7200EA07C0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		F60E22382A1F4C7200EA07C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		F60E22402A1F4CC100EA07C0 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		F60E22412A1F4CC100EA07C0 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		F60E22422A1F4CC100EA07C0 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		F60E22482A1F53CD00EA07C0 /* DataModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelResponse.swift; sourceTree = "<group>"; };
+		F60E224A2A1F562800EA07C0 /* IngredientsModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModelResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				F60E222E2A1F4B7E00EA07C0 /* APIErrorResponse.swift */,
-				F60E22302A1F4B9E00EA07C0 /* APISuccesResponse.swift */,
 				F60E22322A1F4BC200EA07C0 /* APITypeResponse.swift */,
+				F60E22472A1F538600EA07C0 /* APISuccesResponse */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +161,16 @@
 				F60E22422A1F4CC100EA07C0 /* ProductViewController.xib */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		F60E22472A1F538600EA07C0 /* APISuccesResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F60E22482A1F53CD00EA07C0 /* DataModelResponse.swift */,
+				F60E224A2A1F562800EA07C0 /* IngredientsModelResponse.swift */,
+				F60E22302A1F4B9E00EA07C0 /* ProductModelResponse.swift */,
+			);
+			path = APISuccesResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,14 +250,16 @@
 				F60E222C2A1F4ACA00EA07C0 /* UIView.swift in Sources */,
 				F60E223D2A1F4C7200EA07C0 /* HomeViewModel.swift in Sources */,
 				F60E22112A1F394700EA07C0 /* AppDelegate.swift in Sources */,
+				F60E224B2A1F562800EA07C0 /* IngredientsModelResponse.swift in Sources */,
 				F60E222F2A1F4B7E00EA07C0 /* APIErrorResponse.swift in Sources */,
 				F60E22432A1F4CC100EA07C0 /* ProductRouter.swift in Sources */,
 				F60E22332A1F4BC200EA07C0 /* APITypeResponse.swift in Sources */,
 				F60E22272A1F46F200EA07C0 /* API.swift in Sources */,
 				F60E223C2A1F4C7200EA07C0 /* HomeViewController.swift in Sources */,
-				F60E22312A1F4B9E00EA07C0 /* APISuccesResponse.swift in Sources */,
+				F60E22312A1F4B9E00EA07C0 /* ProductModelResponse.swift in Sources */,
 				F60E222A2A1F49AF00EA07C0 /* UIViewController.swift in Sources */,
 				F60E223B2A1F4C7200EA07C0 /* HomeRouter.swift in Sources */,
+				F60E22492A1F53CD00EA07C0 /* DataModelResponse.swift in Sources */,
 				F60E22132A1F394700EA07C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
